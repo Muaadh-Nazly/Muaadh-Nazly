@@ -12,6 +12,7 @@ DATA_FILE = f"{DATA_DIR}/dataset.csv"
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the API"}
+
 @app.post("/upload_dataset/")
 async def upload_dataset(file: UploadFile = File(...)):
     """Upload a dataset (CSV file)."""
@@ -38,3 +39,6 @@ def get_dataset(format: str = "json"):
     else:
         raise HTTPException(status_code=400, detail="Invalid format. Use 'json' or 'csv'.")
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
