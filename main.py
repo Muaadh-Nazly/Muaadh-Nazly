@@ -39,6 +39,9 @@ def get_dataset(format: str = "json"):
     else:
         raise HTTPException(status_code=400, detail="Invalid format. Use 'json' or 'csv'.")
 
+import os
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
