@@ -9,6 +9,9 @@ DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)  # Create a folder to store datasets
 DATA_FILE = f"{DATA_DIR}/dataset.csv"
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the API"}
 @app.post("/upload_dataset/")
 async def upload_dataset(file: UploadFile = File(...)):
     """Upload a dataset (CSV file)."""
