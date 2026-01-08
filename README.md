@@ -53,9 +53,10 @@ I am currently developing academic and applied projects in areas such as:
 ## 🤝 Open to Opportunities
 
 I am open to:
-- Internships (Data Science / ML / AI)
+- Junior Positions (Data Science / ML / AI)
 - Research collaborations
 - Open-source contributions
+- Freelance Projects
 
 ---
 
